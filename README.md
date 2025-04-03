@@ -12,13 +12,13 @@ Implemented `Queue.ts` uses synchronous locking,which includes:
 
 3. state tracking:
 
-   `keyLocks`:ensures only one operation per key processes at a time
+   `keyLocks`:ensures only one operation per key proceses at a time
 
-   `pendingConfirmations: prevents duplicate processing during confirmation
+   `pendingConfirmations`: prevents duplicate processing during confirmation
 
 4. worker compatibility:
 
-   avoids `async/await` to match the synchronous `worker.ts` interface
+   avoids `async/await` to match the synchronous `worker.ts` 
 
 this guarantees all operations execute in order, producing the correct final value of `95` for all items.
 
@@ -52,6 +52,13 @@ DB state:
     "item3": 95
 }
 ```
+
+# Improvement suggestions:
+
+1. separate queue can be used for each db key
+2. spin locks could be replaced with asynchronous code for faster processing
+3. failed operations could be processed
+4. ACID principle cpuld be implemented for db transacions
 
 # Task description:
 
