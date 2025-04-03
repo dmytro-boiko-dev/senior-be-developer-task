@@ -1,0 +1,18 @@
+{
+  "name": "senior-be-developer-task",
+  "version": "1.0.0",
+  "description": "Hello! If you are viewing this repository you are probably a candidate for HyperGuest senior backend developer, congrats!",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dmytro Boiko",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
